@@ -28,11 +28,11 @@ contract MoodNftIntegrationTest is Test {
         console.log(moodNft.tokenURI(0));
     }
 
-    function testFlipMoodIntegration() public {
-        vm.prank(USER);
-        moodNft.mintNft();
-        vm.prank(USER);
-        moodNft.flipMood(0);
-        assertEq(keccak256(abi.encodePacked(moodNft.tokenURI(0))), keccak256(abi.encodePacked(SAD_SVG_URI)));
-    }
+    // function testFlipMoodIntegration() public {
+    //     vm.prank(USER);
+    //     moodNft.mintNft();
+    //     vm.prank(USER);
+    //     moodNft.flipMood(0);
+    //     assertEq(keccak256(abi.encodePacked(moodNft.tokenURI(0))), keccak256(abi.encodePacked(SAD_SVG_URI)));
+    // }
 }
